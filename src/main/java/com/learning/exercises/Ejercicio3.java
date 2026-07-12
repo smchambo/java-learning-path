@@ -1,3 +1,4 @@
+package com.learning.exercises;
 import java.util.Scanner;
 public class Ejercicio3 {
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class Ejercicio3 {
                 cantidadImpares++;
             }
 
-            System.out.print("¿Querés ingresar otro número? Ingrese la letra  ' s ' para si y 'n ' para no  (s/n): ");
+            System.out.print("¿Querés ingresar otro número? Ingrese la letra  's' para si y 'n' para no  (s/n): ");
             continuar = input.nextLine().trim().toLowerCase();
 
         } while (continuar.equals("s"));
