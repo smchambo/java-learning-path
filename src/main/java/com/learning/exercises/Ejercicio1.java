@@ -4,36 +4,36 @@ import java.util.Scanner;
 public class Ejercicio1 {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        String nombre = leerNombre(scanner);
-        int edad = leerEdad(scanner);
+        String nombre = leerNombre(input);
+        int edad = leerEdad(input);
 
         mostrarMensaje(nombre, edad);
 
-        scanner.close();
+        input.close();
     }
 
-    public static String leerNombre(Scanner scanner) {
+    public static String leerNombre(Scanner input) {
         System.out.print("Ingresa tu nombre: ");
-        return scanner.nextLine();
+        return input.nextLine();
     }
 
-    public static int leerEdad(Scanner scanner) {
+    public static int leerEdad(Scanner input) {
         int edad;
-        while (true) {
+        do {
             System.out.print("Ingresa tu edad: ");
-            edad = scanner.nextInt();
+            edad = input.nextInt();
             if (edad >= 0) {
                 break;
             }
             System.out.println("La edad no puede ser negativa. Intentá de nuevo.");
-        }
+        } while ( edad <0);
         return edad;
     }
 
     public static void mostrarMensaje(String nombre, int edad) {
-        System.out.println("Hola " + nombre + ", tienes " + edad + " años.");
-        System.out.println("En 10 años tendrás " + (edad + 10) + " años.");
+        System.out.println(String.format("Hola %s, tienes %d años.", nombre, edad));
+        System.out.println(String.format("En 10 años tendrás %d años.", edad + 10));
     }
 }
