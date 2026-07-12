@@ -5,20 +5,24 @@ import java.util.Scanner;
 public class Ejercicio5 {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.print("Ingresa el número: ");
-        int numero = scanner.nextInt();
+        System.out.print("Ingresa el número que desee para su respectiva tabla: ");
+        int numero = input.nextInt();
+       while(numero <1 || numero >10){
+           System.out.print("El número debe estar entre 1 y 10. Ingresá de nuevo: ");
+           numero = input.nextInt();
+       }
 
-        System.out.print("Rango inicial (Enter para 1): ");
-        int desde = scanner.nextInt();
+        System.out.print("Rango inicial (escribe el numero por donde empieza la tabla, se sugiere a partir desde el valor 1 como el minimo en adelante  y despues presiona enter): ");
+        int desde = input.nextInt();
 
-        System.out.print("Rango final (Enter para 10): ");
-        int hasta = scanner.nextInt();
+        System.out.print("Rango final (escribe el numero por donde finalize la tabla teniendo en cuenta como maximo el valor 10 y despues presiona enter): ");
+        int hasta = input.nextInt();
 
         imprimirTabla(numero, desde, hasta);
 
-        scanner.close();
+        input.close();
     }
 
     public static void imprimirTabla(int numero, int desde, int hasta) {
