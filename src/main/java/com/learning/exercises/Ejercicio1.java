@@ -33,7 +33,7 @@ public class Ejercicio1 {
     }
 
     public static void mostrarMensaje(String nombre, int edad) {
-        System.out.println(String.format("Hola %s, tienes %d años.", nombre, edad));
-        System.out.println(String.format("En 10 años tendrás %d años.", edad + 10));
+        System.out.printf("Hola %s, tienes %d años.%n", nombre, edad);
+        System.out.printf("En 10 años tendrás %d años.", edad + 10);
     }
 }
