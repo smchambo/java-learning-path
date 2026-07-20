@@ -15,7 +15,7 @@ public class Ejercicio4 {
         System.out.println("El número menor es " + obtenerMenor(n1, n2, n3));
 
         if (hayRepetidos(n1, n2, n3)) {
-            System.out.println("Hay números repetidos.");
+            System.out.println("El número repetido es: " + obtenerRepetido(n1, n2, n3));
         }
 
         input.close();
@@ -40,5 +40,11 @@ public class Ejercicio4 {
 
     public static boolean hayRepetidos(int a, int b, int c) {
         return a == b || b == c || a == c;
+    }
+
+    public static int obtenerRepetido(int a, int b, int c) {
+        if (a == b || a == c) return a;
+        if (b == c) return b;
+        return -1;
     }
 }
