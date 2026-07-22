@@ -24,16 +24,15 @@ public class Ejercicio1 {
         do {
             System.out.print("Ingresa tu edad: ");
             edad = input.nextInt();
-            if (edad >= 0) {
-                break;
+            if (edad < 0) {
+                System.out.println("La edad no puede ser negativa. Intentá de nuevo.");
             }
-            System.out.println("La edad no puede ser negativa. Intentá de nuevo.");
-        } while ( edad <0);
+        } while (edad < 0);
         return edad;
     }
 
     public static void mostrarMensaje(String nombre, int edad) {
-        System.out.printf("Hola %s, tienes %d años.%n", nombre, edad);
+        System.out.printf("Hola %s, tienes %d años.\n", nombre, edad);
         System.out.printf("En 10 años tendrás %d años.", edad + 10);
     }
 }
